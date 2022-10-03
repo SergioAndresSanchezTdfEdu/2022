@@ -1,17 +1,17 @@
 let readlineSync = require('readline-sync');
 
-let vuelta1 = readlineSync.question("Indique Valor de vuelta 1");
-let vuelta2 = readlineSync.question("Indique Valor de vuelta 2");
-let vuelta3 = readlineSync.question("Indique Valor de vuelta 3");
-let vuelta4 = readlineSync.question("Indique Valor de vuelta 4");
+let vuelta1 = readlineSync.questionInt("Indique Valor de vuelta 1: ");
+let vuelta2 = readlineSync.questionInt("Indique Valor de vuelta 2: ");
+let vuelta3 = readlineSync.questionInt("Indique Valor de vuelta 3: ");
+let vuelta4 = readlineSync.questionInt("Indique Valor de vuelta 4: ");
 
 let tiempoTotal = 0; 
 
 function sumarVueltas() {
-  tiempoTotal = Number(vuelta1.value) + Number(vuelta2.value) + Number(vuelta3.value) + Number(vuelta4.value);
+  tiempoTotal = Number(vuelta1) + Number(vuelta2) + Number(vuelta3) + Number(vuelta4);
 }
 
-function tiempoTotal() {
+function mostrarTiempoTotal() {
   console.log("Tiempo total: ", tiempoTotal);
 }
 
@@ -20,5 +20,5 @@ function tiempoPromedio() {
 }
 
 sumarVueltas();
-tiempoTotal();
+mostrarTiempoTotal();
 tiempoPromedio();
